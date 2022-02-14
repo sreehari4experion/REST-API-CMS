@@ -21,6 +21,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClinicManagementSystem.Repository;
+using ClinicManagementSystem.Repository.Appointments;
+using ClinicManagementSystem.Repository.Bills;
+using ClinicManagementSystem.Repository.Patients;
+using ClinicManagementSystem.Repository.LabTests;
+using Microsoft.OpenApi.Models;
 
 namespace ClinicManagementSystem
 {
@@ -40,7 +45,10 @@ namespace ClinicManagementSystem
             services.AddControllers();
 
             //swagger documentation
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "DemoExperionFirstWebAPI", Version = "v1" });
+            });
 
             //connection string for db
             services.AddDbContext<ClinicManagementSystemDBContext>(db => db.UseSqlServer(Configuration.GetConnectionString("CMSConnection")));
@@ -52,6 +60,22 @@ namespace ClinicManagementSystem
             services.AddScoped<IQualificationsRepository, QualificationsRepository>();
             services.AddScoped<IMedicineAdviceRepository, MedicineAdviceRepository>();
             services.AddScoped<IMedicinesRepository, MedicinesRepository>();
+            services.AddScoped<IAppointment, AppointmentClass>();
+            services.AddScoped<IBill, BillClass>();
+            services.AddScoped<IMedicinesBill, MedicinesBillClass>();
+            services.AddScoped<IConsultancyBill, ConsultancyBillClass>();
+            services.AddScoped<ITestsBill, TestsBillClass>();
+            services.AddScoped<IPatientsRepository, PatientsRepository>();
+
+
+
+            services.AddScoped<ILabTestsRepository, LabTestsRepository>();
+
+
+
+            services.AddScoped<ITestAdviceRepository, TestAdviceRepository>();
+
+
 
 
 
@@ -94,14 +118,11 @@ namespace ClinicManagementSystem
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/swagger.json", "cmsAPP v1"));
             }
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "my test api");
-            });
-
+         
             app.UseHttpsRedirection();
 
             app.UseRouting();

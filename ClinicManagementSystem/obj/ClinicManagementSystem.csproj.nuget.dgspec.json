@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sreehari.prathap\\Documents\\Experion-Net-TRIDENT-RESTAPI\\ClinicManagementSystem\\ClinicManagementSystem.csproj": {}
+    "C:\\Users\\sreehari.prathap\\Desktop\\RestAPI\\ClinicManagementSystem\\ClinicManagementSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sreehari.prathap\\Documents\\Experion-Net-TRIDENT-RESTAPI\\ClinicManagementSystem\\ClinicManagementSystem.csproj": {
+    "C:\\Users\\sreehari.prathap\\Desktop\\RestAPI\\ClinicManagementSystem\\ClinicManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sreehari.prathap\\Documents\\Experion-Net-TRIDENT-RESTAPI\\ClinicManagementSystem\\ClinicManagementSystem.csproj",
+        "projectUniqueName": "C:\\Users\\sreehari.prathap\\Desktop\\RestAPI\\ClinicManagementSystem\\ClinicManagementSystem.csproj",
         "projectName": "ClinicManagementSystem",
-        "projectPath": "C:\\Users\\sreehari.prathap\\Documents\\Experion-Net-TRIDENT-RESTAPI\\ClinicManagementSystem\\ClinicManagementSystem.csproj",
+        "projectPath": "C:\\Users\\sreehari.prathap\\Desktop\\RestAPI\\ClinicManagementSystem\\ClinicManagementSystem.csproj",
         "packagesPath": "C:\\Users\\sreehari.prathap\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sreehari.prathap\\Documents\\Experion-Net-TRIDENT-RESTAPI\\ClinicManagementSystem\\obj\\",
+        "outputPath": "C:\\Users\\sreehari.prathap\\Desktop\\RestAPI\\ClinicManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sreehari.prathap\\AppData\\Roaming\\NuGet\\NuGet.Config",
